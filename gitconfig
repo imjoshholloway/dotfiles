@@ -1,0 +1,22 @@
+[user]
+  name = Josh Holloway
+  email = josh.holloway@me.com
+  signingkey = 890823B53584EB62
+[core]
+  excludesfile = /Users/jholloway/.gitignore_global
+  editor = vim
+[alias]
+  update-submodules = submodule update --init --recursive
+  upgrade-submodules = submodule update --init --remote
+  undo = reset HEAD~
+  unstage = reset HEAD --
+  delete = branch -D
+  sync = pull -q -r origin
+  last = log -1 HEAD
+  amend = commit --amend --no-edit
+[url "git@github.com:"]
+  insteadOf = https://github.com/
+[url "git@cd.splunkdev.com:"]
+  insteadOf = https://cd.splunkdev.com/
+[push]
+  default = simple

@@ -1,0 +1,7 @@
+[submodule "tmux/plugins/tpm"]
+	path = tmux/plugins/tpm
+	url = git@github.com:tmux-plugins/tpm.git
+	branch = master
+[submodule "kitty/kitty-themes"]
+	path = kitty/kitty-themes
+	url = git@github.com:dexpota/kitty-themes.git

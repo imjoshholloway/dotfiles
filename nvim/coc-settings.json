@@ -1,0 +1,16 @@
+{
+  "suggest.floatEnable": true,
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "filetypes": ["go"]
+    },
+    "rls": {
+      "command": "rustup",
+      "args": ["run", "nightly", "rls"],
+      "rootPatterns": ["Cargo.toml"],
+      "filetypes": ["rust"]
+    }
+  }
+}
