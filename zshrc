@@ -1,6 +1,8 @@
 # ensure homebrew is setup correctly for linux
 test -d $HOME/.linuxbrew && eval $($HOME/.linuxbrew/bin/brew shellenv)
 test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
+test -d /opt/homebrew && eval $(/opt/homebrew/bin/brew shellenv)
 command -v brew &> /dev/null && export BREW_PREFIX=$(brew --prefix)
 
 eval $($BREW_PREFIX/bin/brew shellenv)
@@ -57,8 +59,8 @@ bindkey -v
 # See: https://github.com/denysdovhan/spaceship-prompt/issues/91
 bindkey "^?" backward-delete-char
 
-#bindkey "^[[A" history-beginning-search-backward
-#bindkey "^[[B" history-beginning-search-forward
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 #bindkey "^[[H" beginning-of-line
 #bindkey "^[[F" end-of-line
 #bindkey "^[[3~" delete-char
@@ -105,11 +107,5 @@ test -f $BREW_PREFIX/opt/nvm/nvm.sh && source $BREW_PREFIX/opt/nvm/nvm.sh
 # ===========================
 test -f $HOME/.localrc && source $HOME/.localrc
 
-# configure fzf
-test -f $HOME/.fzf.zsh && source $HOME/.fzf.zsh
-
 # finally.. init the prompt
 eval "$(starship init zsh)"
-
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
