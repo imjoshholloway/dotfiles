@@ -14,8 +14,12 @@ export PATH="$GOPATH/bin:$HOME/bin:$BREW_PREFIX/bin:$PATH"
 export ZPLUG_HOME=$BREW_PREFIX/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
+# ensure gpg is working for git
+export GPG_TTY=$(tty)
+
 #zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 zplug "bobsoppe/zsh-ssh-agent", use:ssh-agent.zsh, from:github
+zplug "plugins/gpg-agent", from:oh-my-zsh
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
@@ -97,10 +101,13 @@ alias reload="source $HOME/.zshrc"
 alias aws_whoami="aws sts get-caller-identity"
 alias k="kubectl"
 alias kctx="kubectx"
+alias kns="kubens"
 alias vim="nvim"
+# force local/bin/git to take precedence over system git when $PATH doesn't
+alias git="/usr/local/bin/git"
 
 export NVM_DIR="$HOME/.nvm"
-test -f $BREW_PREFIX/opt/nvm/nvm.sh && source $BREW_PREFIX/opt/nvm/nvm.sh
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # ===========================
 # local only sensitive things
