@@ -9,5 +9,6 @@ source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/coc.vim
 source $HOME/.config/nvim/which-key.vim
 source $HOME/.config/nvim/golang.vim
+source $HOME/.config/nvim/git.vim
 source $HOME/.config/nvim/startify.vim
 

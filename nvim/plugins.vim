@@ -30,6 +30,14 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'sheerun/vim-polyglot'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'google/vim-jsonnet'
+  Plug 'rhadley-recurly/vim-terragrunt'
+  Plug 'hashivim/vim-terraform'
+  Plug 'aklt/plantuml-syntax'
+  Plug 'thecodesmith/vim-groovy'
+
+  " Markdown previews
+  Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug', 'plantuml']}
+
   " auto detect indentation settings
   Plug 'tpope/vim-sleuth'
   " tags
@@ -48,6 +56,7 @@ call plug#begin('~/.config/nvim/plugged')
 
   " navigation without stupidity
   Plug 'christoomey/vim-tmux-navigator'
+  Plug 'rhysd/clever-f.vim'
 
   " git
   Plug 'mhinz/vim-signify'

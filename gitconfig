@@ -1,24 +1,38 @@
 [user]
-  name = Josh Holloway
-  email = josh.holloway@me.com
-  signingkey = 890823B53584EB62
+    name = Josh Holloway
+    email = imjoshholloway@gmail.com
 [core]
-  excludesfile = /Users/jholloway/.gitignore_global
-  editor = vim
+    excludesfile = ~/.gitignore_global
+    editor = vim
 [alias]
-  update-submodules = submodule update --init --recursive
-  upgrade-submodules = submodule update --init --remote
-  undo = reset HEAD~
-  unstage = reset HEAD --
-  delete = branch -D
-  sync = pull -q -r origin
-  last = log -1 HEAD
-  amend = commit --amend --no-edit
+    update-submodules = submodule update --init --recursive
+    upgrade-submodules = submodule update --init --remote
+    undo = reset HEAD~
+    unstage = reset HEAD --
+    delete = branch -D
+    sync = pull -q -r origin
+    last = log -1 HEAD
+    amend = commit --amend --no-edit
+    squash = rebase -i HEAD~$1
 [url "git@github.com:"]
-  insteadOf = https://github.com/
-[url "git@cd.splunkdev.com:"]
-  insteadOf = https://cd.splunkdev.com/
+    insteadOf = https://github.com/
 [push]
-  default = simple
+    default = simple
 [pull]
-	rebase = true
+    ff = only
+[branch "main"]
+    mergeoptions = --ff-only
+[branch "master"]
+    mergeoptions = --ff-only
+[branch "develop"]
+    mergeoptions = --ff-only
+[filter "lfs"]
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+[init]
+    defaultBranch = main
+[include]
+    path = ~/.gitconfig_local
+

@@ -31,7 +31,7 @@ let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
 let g:which_key_map['W'] = [ 'w'                          , 'write' ]
 let g:which_key_map['q'] = [ 'q'                          , 'quit' ]
 let g:which_key_map['z'] = [ ':Goyo'                      , 'zen' ]
-
+let g:which_key_map['p'] = [ ':MarkdownPreview', 'markdown preview' ]
 " g is for git
 let g:which_key_map.g = {
       \ 'name' : '+git' ,

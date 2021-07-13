@@ -16,6 +16,7 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 
 if OS.mac?
+  cask "iterm2"
   cask "1password"
   cask "docker"
   cask "fanny"

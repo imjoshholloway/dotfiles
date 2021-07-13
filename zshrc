@@ -114,5 +114,11 @@ export NVM_DIR="$HOME/.nvm"
 # ===========================
 test -f $HOME/.localrc && source $HOME/.localrc
 
+\. "$(brew --prefix asdf)/asdf.sh"
+eval "$(direnv hook zsh)"
+
+# A shortcut for asdf managed direnv.
+direnv() { asdf exec direnv "$@"; }
+
 # finally.. init the prompt
 eval "$(starship init zsh)"

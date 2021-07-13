@@ -48,6 +48,9 @@ set gcr=a:blinkon0      " disable cursor blink
 set list
 set listchars=tab:\|\ 
 
+" system clipboard
+set clipboard^=unnamed,unnamedplus
+
 " make the cursor nice
 set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
 
@@ -56,3 +59,9 @@ autocmd BufWritePre * FixWhitespace
 
 " make FZF act like ctrlp
 nnoremap <C-p> :Files<cr>
+
+" Add MarkdownPreview for filetypes
+let g:mkdp_filetypes = ['markdown', 'plantuml']
+let g:mkdp_preview_options = {
+    \ 'uml': { 'server': "https://plantuml.corp.tanium.com" },
+    \ }
