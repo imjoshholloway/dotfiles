@@ -16,14 +16,13 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 
 if OS.mac?
+  cask "kitty"
   cask "iterm2"
   cask "1password"
   cask "docker"
-  cask "fanny"
   cask "slack"
-  cask "spectacle"
+  cask "rectangle"
   cask "spotify"
   cask "visual-studio-code"
-
   cask "font-fira-code-nerd-font"
 end

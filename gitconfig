@@ -3,7 +3,7 @@
     email = imjoshholloway@gmail.com
 [core]
     excludesfile = ~/.gitignore_global
-    editor = vim
+    editor = nvim
 [alias]
     update-submodules = submodule update --init --recursive
     upgrade-submodules = submodule update --init --remote

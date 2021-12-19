@@ -99,7 +99,7 @@ mkdir -p ~/.config
 # dots are configs that live as a .<name> under ~/
 dots=("zshrc" "gitconfig" "gitignore_global")
 # configs live under ~/.config/<name>
-configs=("wezterm")
+configs=("kitty")
 
 # install the top level dotfiles
 for f in ${dots[@]}; do

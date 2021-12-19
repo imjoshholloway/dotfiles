@@ -54,6 +54,9 @@ setopt complete_in_word
 setopt always_to_end
 setopt complete_aliases
 
+autoload -Uz compinit
+compinit
+
 # ============
 # key bindings
 # ============
@@ -103,22 +106,17 @@ alias k="kubectl"
 alias kctx="kubectx"
 alias kns="kubens"
 alias vim="nvim"
-# force local/bin/git to take precedence over system git when $PATH doesn't
-alias git="/usr/local/bin/git"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+test -f $BREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc && source "$BREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+test -f $BREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc && source "$BREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 # ===========================
 # local only sensitive things
 # ===========================
 test -f $HOME/.localrc && source $HOME/.localrc
-
-\. "$(brew --prefix asdf)/asdf.sh"
-eval "$(direnv hook zsh)"
-
-# A shortcut for asdf managed direnv.
-direnv() { asdf exec direnv "$@"; }
 
 # finally.. init the prompt
 eval "$(starship init zsh)"
