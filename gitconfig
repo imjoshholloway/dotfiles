@@ -1,0 +1,10 @@
+[user]
+  name	     = Josh Holloway
+  email	     = imjoshholloway@gmail.com
+  signingkey = /Users/imjoshholloway/.ssh/id_ed25519.pub
+[gpg]
+  format = ssh
+[push]
+  autoSetupRemote = true
+[init]
+  defaultBranch = main

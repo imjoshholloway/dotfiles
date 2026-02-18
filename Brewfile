@@ -1,0 +1,11 @@
+brew "git"
+brew "gzip"
+brew "jq"
+brew "kubectl"
+brew "kubectx"
+brew "proto"
+brew "neovim"
+brew "tree"
+
+cask "ghostty"
+cask "google-chrome"
